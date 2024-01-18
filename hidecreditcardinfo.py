@@ -14,3 +14,5 @@ def ask_for_card_change():
 
 hide_a_card_number()
 ask_for_card_change()
+
+print("thanks for using my code")
