@@ -1,5 +1,4 @@
-Today is 23 of january 2024 and i learnt a little bit more about git pull push
-and now im going to be sure that i upload everyday at least one algo
-problem.
+mid = 5
 
-thanks for watching my git pwps
+1, 2, 3, 4, 5, 5, 5,
+
