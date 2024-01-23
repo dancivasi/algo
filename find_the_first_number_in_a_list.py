@@ -1,4 +1,5 @@
-nums = [1, 2, 3, 4, 5]
+nums = [2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 5, 5, 5, 6, 6, 7, 8, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9,
+        9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9]
 target = 5
 start = 0
 end = len(nums) - 1
@@ -10,9 +11,9 @@ while len(nums[start:end + 1]) != 2:
         end = mid
         continue
     elif nums[mid] < target:
-        start = mid + 1
+        start = mid
     else:
-        end = mid - 1
+        end = mid
 counter = start
 for i in nums[start:end + 1]:
     if i != target:
