@@ -1,52 +1,51 @@
-def middle_target(nums):
+nums = [1, 1, 1, 1, 2, 2, 2, 2, 5, 5, 5, 9, 9, 9, 9, 9]
+target = 5
+
+
+def find_middle(nums, target):
     start = 0
     end = len(nums) - 1
-    while start <= end:
-        mid = (start + end) // 2
 
+    while start < end:
+        mid = (start + end) // 2
         if nums[mid] == target:
-            print(mid)
-            break
+            return mid
         elif nums[mid] > target:
             end = mid - 1
-        elif nums[mid] < target:
+        else:
             start = mid + 1
-    return mid
 
-def find_index(side):
 
-    if side == 'stanga':
-        mid = middle_target(nums)
+def find_first_or_last(nums, side, mid):
+    if side == "first":
         start = 0
         end = mid
-        while len(nums[start:end+1]) != 2:
-            middle =  middle_target(nums[start:end+1])
-
+        while start < end:
+            middle = (start + end) // 2
             if nums[middle] == target:
-                end = mid
-                continue
-            elif nums[mid] < target:
-                start = mid
-            else:
-                end = mid
+                end = middle
+                if nums[end - 1] != target:
+                    return middle
+            elif nums[middle] < target:
+                start = middle
+        return middle
 
-
-    elif side == 'dreapta':
-        start = 0
-        end = mid
-        while len(nums[start:end + 1]) != 2:
-            middle = middle_target(nums[start:end + 1])
-
+    if side == "last":
+        start = mid
+        end = len(nums) - 1
+        while end > start:
+            middle = (start + end + 1) // 2
             if nums[middle] == target:
-                end = mid
-                continue
-            elif nums[mid] < target:
-                start = mid
-            else:
-                end = mid
+                start = middle
+                if start == len(nums) - 1 and nums[start] == target:
+                    return middle
+                elif nums[start + 1] != target:
+                    return middle
+            elif nums[middle] > target:
+                end = middle
+        return middle
 
-nums = [1, 2, 3, 4, 5, 5, 5, 6]
-target = 5
-mid = middle_target(nums)
-find_index('stanga')
-find_index('dreapta')
+
+mid = find_middle(nums, target)
+print(find_first_or_last(nums, "first", mid))
+print(find_first_or_last(nums, "last", mid))
