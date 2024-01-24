@@ -1,0 +1,19 @@
+a b c d c a
+
+holder = -1
+pointer1 = 0
+pointer2 = pointer1 + 1
+
+pointer1 va fi 2
+pointer2 va fi 1 3 5 3 2 in timp ce
+pointer1 ramane 2
+pointer2 de 1 3 5 3 2 indexu lor adica
+1 2 3 4 5
+
+atata timp cat pointer1 e 0
+adica mai mic decat len de nums
+eu trebuie sa verific pointer1
+pana cand pointer 2 ajunge la len de nums - 1
+daca nu e egal
+pointer 2 devine + 1
+daca e egal dau pointer1 + 1
