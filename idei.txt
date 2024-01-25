@@ -1,25 +1,7 @@
-de fiecare data eu trebuie sa gasesc targetu la o lista
-am gasit targetu adica primu target care il gasesc
+8. Give me the discount
+Create a function in Python that accepts two parameters.
+ The first should be the full price of an item as an integer.
+  The second should be the discount percentage as an integer.
 
-dupa ce am gasit targetu adica index(5) de exemplu
-de acolo eu plec spre doua parti
-una catre first adica endu o sa fie acel index(5) startu o sa fie 0
-una catre last adica startu o sa fie acel index(5) endu o sa fie len(nums) - 1
-
-catre first startu e 0 endu e index(5)
-while startu e < index(5) eu tot caut mijlocu daca pica mai mic iara rup la mijloc, daca pica 5 ce fac ? inseamna ca e primu 5
-
-catre last startu e index(5) si endu e len(nums)
-while endu > index(5) eu tot caut mijlocu in dreapta, daca pica mai mare rup si caut mijlocu, daca pica 9 rup daca pica 5 inseamna ca e ultimu 5
-
-daca side e first
-el ia mid care va fi index(5) = 10
-ia start care e 0
-si end care e mid adica end = 10
-atata timp cat start e mai mic decat end
-middle e start + end // 2
-if middle < target:
-start = middle:
-else:
-    end = middle
-
+The function should return the price of the item after the discount has been applied.
+ For example, if the price is 100 and the discount is 20, the function should return 80.
